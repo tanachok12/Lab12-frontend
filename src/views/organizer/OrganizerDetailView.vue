@@ -1,12 +1,10 @@
 <template>
-  <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
-  <p>{{ event.description }}</p>
-  <img v-for="url in event.imageUrls" :key="url" :src="url" />
+  <p>{{ organizer.name }}</p>
+  <img v-for="url in organizer.imageUrls" :key="url" :src="url" />
 </template>
-
 <script>
 export default {
-  props: ['id', 'event']
+  props: ['organizer']
 }
 </script>
 <style scoped>
